@@ -1,4 +1,4 @@
-import os
+
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -104,7 +104,7 @@ app.layout = html.Div([
      dash.dependencies.Input('graphType','value')])
 
 def update_graph(industry,priceType,graphType):
-    dff = pd.read_csv( industry + '.csv')
+    dff = pd.read_csv(industry + '.csv')
     if graphType == 'Bar':
         return {
             'data': [
